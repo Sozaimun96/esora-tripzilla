@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One last step · Vote on TripZilla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bar">Voting closes <strong>23 Oct 2026</strong> · <span id="left"></span></div>
+
+<main class="wrap ty">
+  <p class="eyebrow">You're in</p>
+  <h1>Now cast your <em>vote.</em></h1>
+  <p class="lede">One last step: your entry into the S$380 draw only counts once you've voted on TripZilla.</p>
+
+
+  <ol class="shots">
+    <li><img src="step-1.jpg" alt="TripZilla voting page with Activities and Attractions highlighted" loading="lazy">
+      <h3><b>01</b> Open "Activities and Attractions"</h3><p>Tap the sector to expand it and scroll to <strong>Best Yacht Experience</strong>.</p></li>
+    <li><img src="step-2.jpg" alt="Best Yacht Experience dropdown set to Esora Yacht" loading="lazy">
+      <h3><b>02</b> Select Esora Yacht</h3><p>Choose <strong>Esora Yacht</strong> from the dropdown.</p></li>
+    <li><img src="step-3.jpg" alt="The other three sectors highlighted" loading="lazy">
+      <h3><b>03</b> Vote in 2 other sectors</h3><p>To qualify for the draw, pick at least one category in <strong>2 other sectors</strong> (e.g. Hotels, Travel Agencies).</p></li>
+    <li><img src="step-4.jpg" alt="TripZilla contact details form with Submit button" loading="lazy">
+      <h3><b>04</b> Enter your details and submit</h3><p>Fill in your name and email, then hit <strong>Submit</strong>.</p></li>
+  </ol>
+
+  <div class="go">
+    <a class="btn" id="vote" href="https://www.tripzilla.com/excellence-awards/2026/vote">Vote now on TripZilla <span aria-hidden="true">→</span></a>
+    <p class="micro" id="redir">Taking you to TripZilla in <b id="sec">30</b>s · <button type="button" id="stop">Stay here</button></p>
+  </div>
+
+  <p class="close">That's it, you're in the draw. Thank you for supporting us.</p>
+</main>
+
+<footer class="wrap foot">Lucky draw is run by TripZilla. T&amp;Cs apply.</footer>
+<script src="countdown.js"></script>
+<script>
+let s=30;const el=document.getElementById('sec'),t=setInterval(()=>{s--;el.textContent=s;if(s<=0){clearInterval(t);location.href=document.getElementById('vote').href}},1000);
+document.getElementById('stop').onclick=()=>{clearInterval(t);document.getElementById('redir').textContent='Auto-redirect paused. Tap the button when you’re ready.'};
+</script>
+</body>
+</html>
