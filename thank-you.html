@@ -30,7 +30,9 @@
 .cta p{font-size:14px;color:var(--mute)}
 .sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(11,10,8,.92);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:none}
 .sticky .btn{width:100%}
-@media (max-width:640px){.sticky.show{display:block}</style>
+@media (max-width:640px){.sticky.show{display:block}.cta p button{font:inherit;color:var(--gold2);background:none;border:0;text-decoration:underline;cursor:pointer;padding:0}
+.cta p b{color:var(--gold2)}
+</style>
 </head>
 <body>
 <div class="bar">Voting closes <strong>23 Oct 2026</strong> · <span id="left"></span></div>
@@ -66,7 +68,7 @@
 
   <div class="cta" id="cta">
     <a class="btn" href="https://www.tripzilla.com/excellence-awards/2026/vote" target="_blank" rel="noopener">Open TripZilla voting page <span aria-hidden="true">↗</span></a>
-    <p>Opens in a new tab, so you can come back here to check the steps.</p>
+    <p id="redir">Taking you to TripZilla in <b id="sec">30</b>s · <button type="button" id="stop">Stay here</button></p>
   </div>
 </main>
 
@@ -77,6 +79,8 @@
 <script>
 const st=document.getElementById('sticky'),cta=document.getElementById('cta');
 new IntersectionObserver(([e])=>st.classList.toggle('show',!e.isIntersecting&&e.boundingClientRect.top>0)).observe(cta);
+let n=30;const sec=document.getElementById('sec'),url=document.querySelector('.cta .btn').href,t=setInterval(()=>{n--;sec.textContent=n;if(n<=0){clearInterval(t);location.href=url}},1000);
+document.getElementById('stop').onclick=()=>{clearInterval(t);document.getElementById('redir').textContent='Auto-redirect paused. Tap the button when you’re ready.'};
 </script>
 </body>
 </html>
