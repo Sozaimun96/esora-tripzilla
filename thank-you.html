@@ -35,19 +35,32 @@
 .sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(11,10,8,.92);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:none}
 .sticky .btn{width:100%}
 @media (max-width:640px){.sticky.show{display:block}.steps2 li{grid-template-columns:36px 1fr;column-gap:12px}.steps2 .n{width:36px;height:36px;font-size:16px}.steps2 li:not(:last-child)::before{left:17px;top:40px}.steps2 h2{font-size:18px}}
+@media (min-width:900px){
+.tk{max-width:1160px;padding:48px 32px 64px}
+.tk .head{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end}
+.tk .head .rule{margin-top:0}
+.steps2{grid-template-columns:1fr 1fr;gap:28px;margin-top:44px}
+.steps2 li{grid-template-columns:44px 1fr;padding:24px;background:var(--ink2);border:1px solid var(--line);border-radius:12px}
+.steps2 li:not(:last-child)::before{display:none}
+.steps2 .body{grid-template-rows:auto auto 1fr auto}
+.steps2 img{aspect-ratio:2/1;object-fit:contain}
+.cta{max-width:460px;margin:36px auto 0}
+}
 </style>
 </head>
 <body>
 <div class="bar">Voting closes <strong>23 Oct 2026</strong> · <span id="left"></span></div>
 
 <main class="tk">
-  <span class="done"><i>✓</i> Details received</span>
+  <div class="head"><div><span class="done"><i>✓</i> Details received</span>
   <h1>Last step: vote on <em>TripZilla</em></h1>
   <p class="intro">Your entry into the <strong>S$380 voucher draw</strong> only counts after you vote and submit on TripZilla's page. It takes about 2 minutes.</p>
 
+  </div>
   <div class="rule">
     <b>To qualify</b>
     <p>Vote for Esora Yacht, plus at least 1 category in 2 other sectors.</p>
+  </div>
   </div>
 
   <ol class="steps2">
