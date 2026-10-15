@@ -24,18 +24,13 @@
 .steps2 h2{font:700 18px/1.35 Manrope,sans-serif;color:var(--txt)}
 .steps2 h2+p{color:var(--mute);font-size:15px;margin-top:4px}
 .steps2 strong{color:var(--gold2)}
-.steps2 details summary{cursor:pointer;color:var(--gold2);font-size:14px;font-weight:600;list-style:none;display:inline-flex;gap:6px;align-items:center;margin-left:48px}
-.steps2 details summary::-webkit-details-marker{display:none}
-.steps2 details summary::after{content:"▾";transition:transform .2s}
-.steps2 details[open] summary::after{transform:rotate(180deg)}
-.steps2 details img{margin-top:12px;width:100%;border-radius:8px;display:block;background:#fff}
+.steps2 li>img{width:100%;border-radius:8px;display:block;background:#fff}
 .cta{margin-top:32px;display:grid;gap:10px;text-align:center}
 .cta .btn{font-size:18px;padding:20px 24px;width:100%}
 .cta p{font-size:14px;color:var(--mute)}
 .sticky{position:fixed;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:rgba(11,10,8,.92);backdrop-filter:blur(8px);border-top:1px solid var(--line);display:none}
 .sticky .btn{width:100%}
-@media (max-width:640px){.sticky.show{display:block}.steps2 details summary{margin-left:0}}
-</style>
+@media (max-width:640px){.sticky.show{display:block}</style>
 </head>
 <body>
 <div class="bar">Voting closes <strong>23 Oct 2026</strong> · <span id="left"></span></div>
@@ -53,19 +48,19 @@
   <ol class="steps2">
     <li>
       <div class="hd"><span class="n">1</span><div><h2>Tap “Activities and Attractions”</h2><p>Scroll down to <strong>Best Yacht Experience</strong>.</p></div></div>
-      <details><summary>Show me</summary><img src="step-1.jpg" alt="TripZilla voting page with Activities and Attractions highlighted" loading="lazy"></details>
+      <img src="step-1.jpg" alt="TripZilla voting page with Activities and Attractions highlighted" >
     </li>
     <li>
       <div class="hd"><span class="n">2</span><div><h2>Choose <strong>Esora Yacht</strong></h2><p>Pick it from the Best Yacht Experience dropdown.</p></div></div>
-      <details><summary>Show me</summary><img src="step-2.jpg" alt="Best Yacht Experience dropdown set to Esora Yacht" loading="lazy"></details>
+      <img src="step-2.jpg" alt="Best Yacht Experience dropdown set to Esora Yacht" >
     </li>
     <li>
       <div class="hd"><span class="n">3</span><div><h2>Vote in 2 other sectors</h2><p>Any category under e.g. Hotels and Travel Agencies.</p></div></div>
-      <details><summary>Show me</summary><img src="step-3.jpg" alt="The other sectors highlighted" loading="lazy"></details>
+      <img src="step-3.jpg" alt="The other sectors highlighted" >
     </li>
     <li>
       <div class="hd"><span class="n">4</span><div><h2>Enter your name and email, then Submit</h2><p>That's your entry into the draw.</p></div></div>
-      <details><summary>Show me</summary><img src="step-4.jpg" alt="TripZilla contact form with Submit button" loading="lazy"></details>
+      <img src="step-4.jpg" alt="TripZilla contact form with Submit button" >
     </li>
   </ol>
 
